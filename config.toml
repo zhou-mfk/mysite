@@ -100,15 +100,9 @@ autoFigure = true
 
 [[menu.main]]
     parent = "categories"
-    name = "归档"
-    url = "archives/"
+    name = "Archives"
+    url = "archives"
     weight = 2
-
-[[menu.main]]
-    parent = "categories"
-    name = "Code Sample"
-    url = "post/2016-03-08-code-sample"
-    weight = 3
 
 [[menu.main]]
     name = "Tags"
