@@ -1,4 +1,4 @@
-baseURL = "https://zhou-mfk.github.io"
+baseURL = "https://zhou-mfk.github.io/"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Zhou Li Shan"
