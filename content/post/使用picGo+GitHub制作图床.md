@@ -62,7 +62,9 @@ https://raw.githubusercontent.com/github用户名/仓库名/分支名称
 
 截图快捷键 + 上传快捷键，就可以把链接复制到Typora即可使用，这很快捷！
 
+## 参考
 
+[PicGo+GitHub图床，让Markdown飞]( https://juejin.im/entry/5c4ec5aaf265da614420689f )
 
 
 
