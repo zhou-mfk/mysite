@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/github用户名/仓库名/分支名称
 
 设置快捷为 Ctrl + Shift + C
 
-![1571321097511](C:\Users\zhou-\AppData\Roaming\Typora\typora-user-images\1571321097511.png)
+![](https://raw.githubusercontent.com/zhou-mfk/blogimages/master/img/20191017220455.png)
 
 截图快捷键 + 上传快捷键，就可以把链接复制到Typora即可使用，这很快捷！
 
