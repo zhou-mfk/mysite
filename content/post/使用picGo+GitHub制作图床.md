@@ -66,6 +66,10 @@ https://raw.githubusercontent.com/github用户名/仓库名/分支名称
 
 [PicGo+GitHub图床，让Markdown飞]( https://juejin.im/entry/5c4ec5aaf265da614420689f )
 
+> 本文为原创文章，转载注明出处 
+>
+> 如果帮到你了，还请多支持
+
 
 
 
