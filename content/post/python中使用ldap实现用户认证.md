@@ -33,7 +33,7 @@ from random import choice
 LDAP_URL = ["ldap://xx.xx.xx.xxx", "ldaps://xxx.xxx.xxx.xxx", ]
 
 def ldapauth(username, passwd):
-    dn = '%s@corp.bl.com' % username
+    dn = '%s@corp.xx.com' % username
     ldap_url = choice(LDAP_URL)  # 从域链接中也随机读取一个访问
     if ldap_url.startswith('ldaps'):  # 增加对ldaps协议支持
         ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)
