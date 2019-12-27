@@ -31,11 +31,11 @@ keywords: ["prometheus", "监控"]
 
 * Exporter  将监控数据采集的端点通过HTTP服务的形式暴露给Prometheus Server，Prometheus Server通过访问该Exporter提供的Endpoint端点，即可获取到需要采集的监控数据。
 
-  * 直接采集
+  * 直接采集  应用内置了对prometheus的支持，直接把监控数据暴漏出来
 
     应用内置了对prometheus的支持，直接把监控数据暴漏出来
 
-  * 简接采集
+  * 简接采集 应用不支持直接对prometheus, 需要我们安装对应的exporter 如nginx exporter , Consul exporter 
 
     应用不支持直接对prometheus, 需要我们安装对应的exporter 如nginx exporter , Consul exporter 
 
@@ -70,32 +70,34 @@ keywords: ["prometheus", "监控"]
   ```
   http_request_status{code='200',content_path='/api/path', environment='produment'} => [value1@timestamp1,value2@timestamp2...]
   
-  
   http_request_status{code='200',content_path='/api/path2', environment='produment'} => [value1@timestamp1,value2@timestamp2...]
   ```
-
-  > 每一条时间序列由指标名称(Metrics Name)以及一组标签(Labels)唯一标识。
+  
+	> 每一条时间序列由指标名称(Metrics Name)以及一组标签(Labels)唯一标识。
   >
   > 每条时间序列按照时间的先后顺序存储一系列的样本值。
 
-  > 表示维度的标签可能来源于你的监控对象的状态，比如code=404或者content_path=/api/path。也可能来源于的你的环境定义，比如environment=produment。基于这些Labels我们可以方便地对监控数据进行聚合，过滤，裁剪。
+	> 表示维度的标签可能来源于你的监控对象的状态，比如code=404或者content_path=/api/path。也可能来源于的你的环境定义，比如environment=produment。基于这些Labels我们可以方便地对监控数据进行聚合，过滤，裁剪。
 
 * 强大的查询语言promQL
 
   > Prometheus内置了一个强大的数据查询语言PromQL。 通过PromQL可以实现对监控数据的查询、聚合。同时PromQL也被应用于数据可视化(如Grafana)以及告警当中。
-
-  通过PromQL可以轻松回答类似于以下问题：
-
-  - 在过去一段时间中95%应用延迟时间的分布范围？
-  - 预测在4小时后，磁盘空间占用大致会是什么情况？
-  - CPU占用率前5位的服务有哪些？(过滤)
+  >
+  > 通过PromQL可以轻松回答类似于以下问题：
+  >
+  > - 在过去一段时间中95%应用延迟时间的分布范围？
+  >
+  > - 预测在4小时后，磁盘空间占用大致会是什么情况？
+  >
+  > - CPU占用率前5位的服务有哪些？(过滤)
 
 * 高效
 
   > 对于监控系统而言，大量的监控任务必然导致有大量的数据产生。而Prometheus可以高效地处理这些数据，对于单一Prometheus Server实例而言它可以处理：
-
-  - 数以百万的监控指标
-  - 每秒处理数十万的数据点。
+  >
+  > 1. 数以百万的监控指标
+  >
+  > 2. 每秒处理数十万的数据点。
 
 * 可扩展
 
