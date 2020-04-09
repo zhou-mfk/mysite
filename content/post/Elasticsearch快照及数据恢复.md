@@ -32,7 +32,7 @@ all_squash 表示客户机写入nfs的数据全部映射为nobody用户
 
 在这里说明下，并不是要求elasticsearch集群中中每个节点启动的用户id和group id 必须是一致的 只要写入的文件是同一个用户即可，所以这里设置all_squash
 
-### 挂载nfs
+### 2. 挂载nfs
 
 ```shell
 yum install nfs-utils  # 安装nfs工具
@@ -40,7 +40,7 @@ mkdir /data/es_snapshot
 mount -t nfs nfs-server-ip:/data/elastic_backup /data/es_snapshot
 ```
 
-### elasticsearch 修改配置
+### 3. elasticsearch 修改配置
 
 在elasticsearch.yml文件中增以下配置,并重启elasticsearch 
 
@@ -60,7 +60,7 @@ curl -XPUTlocalhost:9200/_cluster/settings -d'{"transient":{"cluster.routing.all
 curl -XPUTlocalhost:9200/_cluster/settings -d'{"transient":{"cluster.routing.allocation.disable_allocation":false}}'
 ```
 
-### 创建仓库
+### 4. 创建仓库
 
 使用指令如下:
 
@@ -111,7 +111,7 @@ GET /_snapshot/my_backup/snapshot_1
 
 ```
 
-## 数据恢复
+### 5. 数据恢复
 
 如果在不同集群恢复，需要把nfs共享过去并同样的配置好repo.path即可使用快照。
 
