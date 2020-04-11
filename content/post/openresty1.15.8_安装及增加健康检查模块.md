@@ -37,7 +37,25 @@ cd openresty-1.15.8.2/bundle/nginx-1.15.8/
 patch -p1<../nginx_upstream_check_module/check_1.12.1+.patch
 
 # 开始编译安装
-./configure --prefix=/usr/local/openresty-1.15 --with-http_stub_status_module --with-debug  --http-client-body-temp-path=/usr/local/openresty-1.15/nginx/client_temp --http-proxy-temp-path=/usr/local/openresty-1.15/nginx/proxy_temp --http-fastcgi-temp-path=/usr/local/openresty-1.15/nginx/fastcgi_temp --http-uwsgi-temp-path=/usr/local/openresty-1.15/nginx/uwsgi_temp --http-scgi-temp-path=/usr/local/openresty-1.15/nginx/scgi_temp --user=nginx --group=nginx --with-http_ssl_module --with-http_realip_module --with-http_addition_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module  --with-http_auth_request_module  --with-mail --with-mail_ssl_module  --with-file-aio --with-ipv6 --with-luajit --with-cc-opt='-O2 -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic' --add-module=./bundle/nginx-upsync-module-2.1.2 --add-module=./bundle/nginx_upstream_check_module
+./configure --prefix=/usr/local/openresty-1.15 \
+--with-http_stub_status_module --with-debug  \
+--http-client-body-temp-path=/usr/local/openresty-1.15/nginx/client_temp \
+--http-proxy-temp-path=/usr/local/openresty-1.15/nginx/proxy_temp \
+--http-fastcgi-temp-path=/usr/local/openresty-1.15/nginx/fastcgi_temp \
+--http-uwsgi-temp-path=/usr/local/openresty-1.15/nginx/uwsgi_temp \
+--http-scgi-temp-path=/usr/local/openresty-1.15/nginx/scgi_temp \
+--user=nginx --group=nginx \
+--with-http_ssl_module --with-http_realip_module \
+--with-http_addition_module --with-http_sub_module \ 
+--with-http_dav_module --with-http_flv_module \
+--with-http_mp4_module --with-http_gunzip_module \
+--with-http_gzip_static_module --with-http_random_index_module \
+--with-http_secure_link_module  --with-http_auth_request_module \
+--with-mail --with-mail_ssl_module  --with-file-aio --with-ipv6 \
+--with-luajit --with-cc-opt='-O2 -g -pipe -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector \
+--param=ssp-buffer-size=4 -m64 -mtune=generic'  \
+--add-module=./bundle/nginx-upsync-module-2.1.2 \
+--add-module=./bundle/nginx_upstream_check_module
 
 gmake
 gmake install
