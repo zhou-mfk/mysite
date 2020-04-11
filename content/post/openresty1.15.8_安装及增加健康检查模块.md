@@ -3,7 +3,7 @@ title: "openresty 1.15.8 安装及增加upstream_check_module和upsync_module"
 date: 2020-04-11T12:22:04+08:00
 draft: false
 tags: ["nginx", "openresty", "nginx_upstream_check_module", "upstram"]
-categories: ["ELK"]
+categories: ["Nginx"]
 keywords: ["openresty", "nginx_upstream_check_module", "upstram", "健康检测"]
 ---
 
