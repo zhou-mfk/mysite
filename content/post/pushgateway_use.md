@@ -11,9 +11,9 @@ keywords: ["prometheus", "pushgateway", "监控", "python", "requests"]
 
 我们都知道prometheus是主动的向被监控端拉取监控数据的，如果有需要向prometheus推送数据只能通过pushgateway的方式。
 
-我们可以使用Prometheus监控到们大部分的应用和主机，但是部有会一些监控数据是无法通过在主机节点上部署一个exporter就能解决的。
+我们可以使用Prometheus监控到们大部分的应用和主机，但是总有会一些监控数据是无法通过在主机节点上部署一个exporter就能解决的。
 
-比如我这边在工作中就遇到监控oracle的相关数据时就比较很不好监控，一些监控所需要的数据需要通过sql语句才能获得到。所以这边使用pushgate可以很好的解决我的问题。
+比如我这边在工作中就遇到监控oracle的相关数据时就比较很不好监控，一些监控所需要的数据需要通过sql语句才能获得到。所以这边使用pushgateway可以很好的解决我的问题。
 
 ### 下载和安装
 
@@ -138,7 +138,7 @@ echo "test_metric 123456" | curl --data-binary @- http://192.168.1.100:9091/metr
 
 `honor_labels: true`
 
-以上都是或网络上介绍的都是curl的命令来推送数据的，下面来使用reqeusts来推送数据。
+官网或网络上介绍的都是curl的命令来推送数据的，下面来使用reqeusts来推送数据。
 
 ### 使用python的requests来推送数据
 
@@ -206,7 +206,9 @@ def delete_metrics(job, instance, labels: dict):
 
 ```
 
-还可以python 的prometheus的prometheus_client  这个涉猎的不多。如果需要的可自行在官方文档上学习。
+还可以python 的 prometheus_client  这个涉猎的不多。如果需要可自行在官方文档上学习。
+
+
 
 
 
