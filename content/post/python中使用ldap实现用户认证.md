@@ -65,8 +65,6 @@ def ldapauth(username, passwd):
             return {'status': 0, 'msg': 'auth error'}
 ```
 
-
-
 以上就是使用python-ldap实现域认证
 
 有时间会试下ldap3这个模块
