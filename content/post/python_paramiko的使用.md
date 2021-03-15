@@ -1,5 +1,5 @@
 ---
-title: "Python_paramiko的使用"
+title: "Python paramiko的使用"
 date: 2021-03-15T10:40:32+08:00
 draft: false
 tags: ["python", "paramiko"]
@@ -8,8 +8,8 @@ keywords: ["python", "paramiko"]
 ---
 
 
-
 使用paramiko在远程服务器上执行命令:
+
 
 ```python
 import paramiko
