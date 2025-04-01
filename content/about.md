@@ -1,7 +1,7 @@
 ---
 title: "关于"
 date: 2019-10-11T12:32:29+08:00
-draft: true
+draft: false
 menu: "main"
 ---
 
