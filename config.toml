@@ -156,7 +156,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     appKey = '你的appKey'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
     verify = false # Verification code
-    avatar = 'mm' 
+    avatar = 'mm'
     placeholder = '说点什么吧...'
     visitor = false
 
@@ -175,7 +175,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     pagePV = true
 
   [params.reward]                                         # 文章打赏
-    enable = true
+    enable = false
     wechat = "https://raw.githubusercontent.com/zhou-mfk/blogimages/master/img/wechatpay.png"           # 微信二维码
     alipay = "https://raw.githubusercontent.com/zhou-mfk/blogimages/master/img/alipay.png"           # 支付宝二维码
 
@@ -186,7 +186,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     # d-facebook = "http://localhost:1313"
     # e-linkedin = "http://localhost:1313"
     # f-google = "http://localhost:1313"
-    # g-github = "http://localhost:1313"
+    g-github = "https://github.com/zhou-mfk"
     # h-weibo = "http://localhost:1313"
     # i-zhihu = "http://localhost:1313"
     # j-douban = "http://localhost:1313"
